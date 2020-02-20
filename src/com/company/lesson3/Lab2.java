@@ -29,7 +29,8 @@ public class Lab2 {
         System.out.println(max);
         System.out.println(Arrays.toString(result));
 
+        System.out.println("stub for git on dev branch");
+
         int x = 123;
-        System.out.println("stub with " + x);
     }
 }
