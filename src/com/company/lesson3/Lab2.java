@@ -28,5 +28,8 @@ public class Lab2 {
 
         System.out.println(max);
         System.out.println(Arrays.toString(result));
+
+        int x = 123;
+        System.out.println("stub with " + x);
     }
 }
