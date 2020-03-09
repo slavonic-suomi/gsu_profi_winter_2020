@@ -1,8 +1,13 @@
 package com.company.lesson6.inner;
 
-public class PrivateTransport extends Object {
+import com.company.lesson6.Color;
+import com.company.lesson6.NumberedObject;
+
+public class PrivateTransport extends Object
+    implements NumberedObject {
     protected int weight;
     private String number;
+    private Color color = Color.RED;
 
     public PrivateTransport() {
         this(100, "ty2");
@@ -12,6 +17,15 @@ public class PrivateTransport extends Object {
         this.weight = weight;
         this.number = number;
         System.out.println("base constr invocation");
+    }
+
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
     }
 
     public String getNumber() {
@@ -87,7 +101,13 @@ public class PrivateTransport extends Object {
     public String toString() {
         return "" +
                 "weight=" + weight +
+                ", color=" + color +
                 ", number='" + number + '\''
                 ;
+    }
+
+    @Override
+    public int compareTo(NumberedObject o) {
+        return this.number.compareTo(o.getNumber());
     }
 }
