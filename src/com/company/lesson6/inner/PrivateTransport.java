@@ -99,6 +99,10 @@ public class PrivateTransport extends Object
 
     @Override
     public String toString() {
+//        StringBuilder res = new StringBuilder();
+//        return res.append("weight=").append(weight)
+//                .append(", color=").append(color)
+//                .toString();
         return "" +
                 "weight=" + weight +
                 ", color=" + color +
