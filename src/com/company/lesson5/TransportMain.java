@@ -27,6 +27,7 @@ public class TransportMain {
 //        System.out.println(input);
         System.out.println(power);
 
+        Bus.createBus(123, "asd");
 
     }
 }

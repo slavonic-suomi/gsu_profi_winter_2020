@@ -10,6 +10,17 @@ public abstract class Transport {
 
     private int passengers;
 
+    public Transport() {
+    }
+
+    public Transport(int routeNumber, String number, boolean hasPandus, Engine engine, int passengers) {
+        this.routeNumber = routeNumber;
+        this.number = number;
+        this.hasPandus = hasPandus;
+        this.engine = engine;
+        this.passengers = passengers;
+    }
+
     public int getPassengers() {
         return this.passengers;
     }
