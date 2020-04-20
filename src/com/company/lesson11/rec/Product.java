@@ -1,6 +1,6 @@
 package com.company.lesson11.rec;
 
-public class Product<E extends Product<E>> implements Comparable<E>{
+public abstract class Product<T extends Product<T>> implements Comparable<T>{
     private int price;
 
     public Product(int price) {
@@ -12,7 +12,12 @@ public class Product<E extends Product<E>> implements Comparable<E>{
     }
 
     @Override
-    public int compareTo(E o) {
-        return Integer.compare(price, o.getPrice());
+    public int compareTo(T o) {
+        int result = Integer.compare(price, o.getPrice());
+        return result == 0 ? subCompareTo(o) : result;
     }
+
+    protected abstract int subCompareTo(T p);
+
+
 }

@@ -1,24 +1,25 @@
 package com.company.lesson11.rec;
 
-import java.util.Arrays;
-import java.util.Collection;
+import com.company.lesson11.Box;
+
+import java.util.*;
 
 public class ProductMain {
 
     public static void main(String[] args) {
-        Product<?>[] products = new Product<?>[2];
-        products[0] = new Phone(1);
-        products[1] = new Computer(1);
+        Phone phone3 = new Phone(3);
+        Phone phone2 = new Phone(2);
+        Computer computer = new Computer(0);
 
+        List<Phone> products = List.of(
+                phone2,
+                new Phone(0),
+                phone3
+        );
 
-        Phone[] phones = new Phone[1];
-        phones[0] = new Phone(2);
+        products = new ArrayList<>(products);
 
-        Arrays.sort(phones);
-        Arrays.sort(products);
-    }
-
-    public static void sortAndPrint(Collection<? extends Number> someCollection) {
+        Collections.sort(products);
 
     }
 }
