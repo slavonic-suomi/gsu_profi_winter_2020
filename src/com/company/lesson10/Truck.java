@@ -14,6 +14,11 @@ public class Truck extends AutoTransport {
         this.weight = weight;
     }
 
+    public Truck(String number, int price, int weight) {
+        super(number, price);
+        this.weight = weight;
+    }
+
     public int getWeight() {
         return weight;
     }
@@ -27,6 +32,10 @@ public class Truck extends AutoTransport {
         return "Truck{" +
                 "weight=" + weight +
                 "} " + super.toString();
+    }
+
+    public String toProtocolString() {
+        return "t|" + weight + "|" + super.toProtocolString();
     }
 
     @Override

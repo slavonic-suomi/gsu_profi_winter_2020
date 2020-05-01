@@ -69,4 +69,8 @@ public class AutoTransport implements Comparable<AutoTransport>{
                 '}';
     }
 
+    public String toProtocolString() {
+        return number + "|" + price;
+    }
+
 }

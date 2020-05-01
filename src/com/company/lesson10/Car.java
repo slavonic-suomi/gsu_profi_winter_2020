@@ -33,6 +33,10 @@ public class Car extends AutoTransport {
                 "} " + super.toString();
     }
 
+    public String toProtocolString() {
+        return "c|" + power + "|" + super.toProtocolString();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
