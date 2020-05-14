@@ -32,9 +32,9 @@ public class GenericContainer<T> {
         count--;
     }
 
-//    public T[] getArray() {
-//        return array;
-//    }
+    public T[] getArray() {
+        return array;
+    }
 
 
     public void printAll() {
